@@ -1,30 +1,40 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+	<div id="nav">
+		<router-link to="/home" v-if="!$route.path.includes('/home')">←</router-link>
+	</div>
+	<router-view />
 </template>
 
 <style lang="scss">
+html {
+	background-color: black;
+	color: white;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+	@font-face {
+		font-family: 'Montserrat';
+		src: url(https://fonts.google.com/specimen/Montserrat?query=mont);
+	}
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	height: 100vh;
+	a {
+		text-decoration: none;
+		color: white;
+	}
 }
 
 #nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+	position: fixed;
+	top: 1rem;
+	left: 1rem;
+	margin-bottom: 1rem;
+	a {
+		font-weight: bold;
+		color: white;
+	}
 }
 </style>
