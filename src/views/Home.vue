@@ -26,44 +26,46 @@ export default defineComponent({
 </template>
 
 <style lang="scss" scoped>
-.home {
-	display: flex;
-	flex-direction: column;
-	margin-top: 5rem;
-	&__logo {
-		background: url(../assets/logo.png) 0 0 no-repeat;
-		background-size: 100%;
-		width: 100vw;
-		z-index: -1;
-	}
-
-	&__nav {
+@media (max-width: 600px) {
+	.home {
 		display: flex;
 		flex-direction: column;
-		justify-content: stretch;
-
-		& img {
-			transform: rotate(90deg) translate(19rem, 7.8rem) scale(2.2);
+		margin-top: 5rem;
+		&__logo {
+			background: url(../assets/logo.png) 0 0 no-repeat;
+			background-size: 100%;
+			width: 100vw;
+			z-index: -1;
 		}
 
-		& p {
-			margin: 6vh;
-			font-size: 3vh;
-		}
-		& p:hover {
-			transition: transform 0.2s;
-			transform: scale(1.5);
-		}
-	}
+		&__nav {
+			display: flex;
+			flex-direction: column;
+			justify-content: stretch;
 
-	&__info-contact {
-		position: fixed;
-		bottom: 0;
-		right: 0;
-		margin: 1rem;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
+			& img {
+				transform: rotate(90deg) translate(19rem, 7.8rem) scale(2.2);
+			}
+
+			& p {
+				margin: 6vh;
+				font-size: 3vh;
+			}
+			& p:hover {
+				transition: transform 0.2s;
+				transform: scale(1.5);
+			}
+		}
+
+		&__info-contact {
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			margin: 1rem;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
 	}
 }
 </style>
