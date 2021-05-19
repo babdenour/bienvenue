@@ -10,17 +10,17 @@ const routes: Array<RouteRecordRaw> = [
 	{
 		path: '/about',
 		name: 'about',
-		component: () => import(/* webpackChunkName: "about" */ '../views/about.vue'),
+		component: () => import('../views/about.vue'),
 	},
 	{
 		path: '/studio',
 		name: 'studio',
-		component: () => import(/* webpackChunkName: "studio" */ '../views/studio.vue'),
+		component: () => import('../views/studio.vue'),
 	},
 	{
 		path: '/cultural',
 		name: 'cultural',
-		component: () => import(/* webpackChunkName: "cultural" */ '../views/cultural.vue'),
+		component: () => import('../views/cultural.vue'),
 	},
 ];
 
