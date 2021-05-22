@@ -11,18 +11,31 @@ export default defineComponent({
 </script>
 
 <template>
+	<div id="nav">
+		<router-link to="/home" v-if="!$route.path.includes('/home')">←</router-link>
+	</div>
 	<div class="cultural">
 		<h1>CULTURAL PROGRAMS</h1>
 
 		<nav-items
-			msg="INITIATIVES TO TAKE CONCRETE ACTIONS TO SUPPORT LOCALS ACTIVITIES."
-			msg2="RESSOURCES RAISED WILL CONTRIBUTE TO SUPPORT OUR PROGRAMS."
-			msg3="TO ENCOURAGE YOUNG TALENTS AND HELP CREATIVES FROM TODAY’S WORLD TO ESTABLISH DURABLE RELATIONSHIPS."
+			msg="bienvenueprojects LEADS INITIATIVES TO TAKE CONCRETE ACTIONS TO SUPPORT COMMUNITIES.
+RAISE FUNDS AND PROVIDE RESSOURCES FOR ORGANIZATIONS, TO SUPPORT OUR CULTURAL PROGRAMS, TO ENCOURAGE YOUNG TALENTS, 
+TO HELP YOUNG CREATIVES"
 		/>
 	</div>
 </template>
 
 <style scoped lang="scss">
+#nav {
+	position: fixed;
+	top: 1rem;
+	left: 1rem;
+	margin-bottom: 1rem;
+	a {
+		font-weight: bold;
+		color: white;
+	}
+}
 .cultural {
 	display: flex;
 	flex-direction: column;

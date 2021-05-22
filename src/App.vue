@@ -1,7 +1,4 @@
 <template>
-	<div id="nav">
-		<router-link to="/home" v-if="!$route.path.includes('/home')">←</router-link>
-	</div>
 	<router-view />
 </template>
 
@@ -23,17 +20,6 @@ html {
 	height: 100vh;
 	a {
 		text-decoration: none;
-		color: white;
-	}
-}
-
-#nav {
-	position: fixed;
-	top: 1rem;
-	left: 1rem;
-	margin-bottom: 1rem;
-	a {
-		font-weight: bold;
 		color: white;
 	}
 }

@@ -1,7 +1,16 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import Home from '../views/home.vue';
+import Home from '../views/Home.vue';
+import About from '../views/About.vue';
+import Studio from '../views/Studio.vue';
+import Cultural from '../views/Cultural.vue';
+import Bienvenue from '../views/Bienvenue.vue';
 
 const routes: Array<RouteRecordRaw> = [
+	{
+		path: '/',
+		name: '/',
+		component: Bienvenue,
+	},
 	{
 		path: '/home',
 		name: 'home',
@@ -9,18 +18,18 @@ const routes: Array<RouteRecordRaw> = [
 	},
 	{
 		path: '/about',
-		name: 'about',
-		component: () => import('../views/about.vue'),
+		name: 'About',
+		component: About,
 	},
 	{
 		path: '/studio',
-		name: 'studio',
-		component: () => import('../views/studio.vue'),
+		name: 'Studio',
+		component: Studio,
 	},
 	{
 		path: '/cultural',
-		name: 'cultural',
-		component: () => import('../views/cultural.vue'),
+		name: 'Cultural',
+		component: Cultural,
 	},
 ];
 

@@ -11,9 +11,9 @@ export default defineComponent({
 	<div class="home">
 		<div class="home__nav">
 			<img src="../assets/logo.png" alt="bienvenue" />
-			<p><router-link to="/studio">STUDIO</router-link></p>
-			<p><router-link to="/cultural">CULTURAL PROGRAMS</router-link></p>
-			<p><router-link to="/about">ABOUT</router-link></p>
+			<p><router-link :to="{ name: 'Studio' }">STUDIO</router-link></p>
+			<p><router-link :to="{ name: 'Cultural' }">CULTURAL PROGRAMS</router-link></p>
+			<p><router-link :to="{ name: 'About' }">ABOUT</router-link></p>
 		</div>
 		<div class="home__info-contact">
 			<a href="https://www.instagram.com/bienvenueprojects/? igshid=a3gc4g3rk7oa"
@@ -27,47 +27,48 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .home {
-	@media (min-width: 601px) {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+
+	&__nav {
 		display: flex;
 		flex-direction: column;
-		margin-top: 5rem;
+		justify-content: stretch;
+
 		& img {
-			transform: scale(0.1);
+			-webkit-transform: translateY(-100%) rotate(90deg); /* Safari */
+			-moz-transform: translateY(-100%) rotate(90deg); /* Firefox 3.6 Firefox 4 */
+			/*-moz-transform-origin: right top; */
+			-ms-transform: translateY(-100%) rotate(90deg); /* IE9 */
+			-o-transform: translateY(-100%) rotate(90deg); /* Opera */
+			transform: translateY(-100%) rotate(90deg); /* W3C */
+			-webkit-transform-origin: left bottom;
+			-moz-transform-origin: left bottom;
+			-ms-transform-origin: left bottom;
+			-o-transform-origin: left bottom;
+			transform-origin: left bottom;
+			// width: 100vw;
 		}
-	}
-	@media (max-width: 600px) {
-		display: flex;
-		flex-direction: column;
-		margin-top: 5rem;
+		& p {
+			margin: 6vh;
+			font-size: 3vh;
 
-		&__nav {
-			display: flex;
-			flex-direction: column;
-			justify-content: stretch;
-
-			& img {
-				transform: rotate(90deg) translate(19rem, 7.8rem) scale(2.2);
-			}
-
-			& p {
-				margin: 6vh;
-				font-size: 3vh;
-			}
-			& p:hover {
+			&:hover {
 				transition: transform 0.2s;
 				transform: scale(1.5);
 			}
 		}
+	}
 
-		&__info-contact {
-			position: fixed;
-			bottom: 0;
-			right: 0;
-			margin: 1rem;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-end;
-		}
+	&__info-contact {
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		margin: 1rem;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
 	}
 }
 </style>
