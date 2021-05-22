@@ -26,17 +26,19 @@ export default defineComponent({
 </template>
 
 <style lang="scss" scoped>
-@media (max-width: 600px) {
-	.home {
+.home {
+	@media (min-width: 601px) {
 		display: flex;
 		flex-direction: column;
 		margin-top: 5rem;
-		&__logo {
-			background: url(../assets/logo.png) 0 0 no-repeat;
-			background-size: 100%;
-			width: 100vw;
-			z-index: -1;
+		& img {
+			transform: scale(0.1);
 		}
+	}
+	@media (max-width: 600px) {
+		display: flex;
+		flex-direction: column;
+		margin-top: 5rem;
 
 		&__nav {
 			display: flex;
