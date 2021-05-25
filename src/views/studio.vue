@@ -17,30 +17,32 @@ export default {
     </div>
     <div class="studio">
       <h1>STUDIO</h1>
-
-      <nav-items
-        class="nav-items"
-        msg="CREATIVE & IMAGE DIRECTION
-            PHOTOGRAPHY
-            FILMS & VIDEOS
-            ADVERTISING
-            BRANDING & IDENTITY
-            MODELS & TALENTS CASTING
-            PRESS RELATION
-            TALENTS & ARTISTS MANAGEMENT
-            CURATION
-            EVENTS
-            DESIGN RESEARCH
-            CREATIVE CONSULTANCY FOR COLLECTION DEVELOPMENT
-            RESEARCH AND DEVELOPMENT FOR MOODBOARDS
-            SUPPORT TO CREATIVE DIRECTOR
-            SET DESIGN
-            PRODUCTION
-            LOCATIONS SCOUTING
-            COMMUNITY SOCIAL STRATEGY
-            WEB DESIGN"
-        msg2="** UPON REQUEST, A MORE DETAILED PORTFOLIO IS AVAILABLE."
-      />
+      <div class="text">
+        <p>CREATIVE & IMAGE DIRECTION</p>
+        <p>PHOTOGRAPHY</p>
+        <p>FILMS & VIDEOS</p>
+        <p>ADVERTISING</p>
+        <p>BRANDING & IDENTITY</p>
+        <p>MODELS & TALENTS CASTING</p>
+        <p>PRESS RELATION</p>
+        <p>TALENTS & ARTISTS MANAGEMENT</p>
+        <p>CURATION</p>
+        <p>EVENTS</p>
+        <p>DESIGN RESEARCH</p>
+        <p>CREATIVE CONSULTANCY</p>
+        <p>COLLECTION DEVELOPMENT</p>
+        <p>MOODBOARDS</p>
+        <p>SUPPORT TO CREATIVE DIRECTOR</p>
+        <p>SET DESIGN</p>
+        <p>PRODUCTION</p>
+        <p>LOCATIONS SCOUTING</p>
+        <p>COMMUNITY SOCIAL STRATEGY</p>
+        <p>WEB DESIGN</p>
+        <br />
+        <p>** UPON REQUEST, A MORE DETAILED</p>
+        <p>PORTFOLIO IS AVAILABLE.</p>
+      </div>
+      <nav-items class="nav-items" msg="" msg2="" />
     </div>
   </div>
 </template>
@@ -60,9 +62,14 @@ export default {
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
+}
 
-  // & .nav-items {
-  // // max-inline-size: 29ch;
-  // }
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  & p {
+    margin: 0;
+  }
 }
 </style>

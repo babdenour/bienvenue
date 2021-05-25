@@ -11,11 +11,6 @@ export default {
 
 <template>
   <div class="nav-items">
-    <div class="nav-items__text">
-      <p>{{ msg }}</p>
-      <p>{{ msg2 }}</p>
-      <p>{{ msg3 }}</p>
-    </div>
     <div class="nav-items__info-contact">
       <a href="https://www.instagram.com/bienvenueprojects/? igshid=a3gc4g3rk7oa"
         >@bienvenueprojects</a

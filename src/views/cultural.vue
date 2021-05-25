@@ -7,7 +7,6 @@ export default {
     NavItems,
   },
 };
-/* eslint-disable max-len */
 </script>
 
 <template>
@@ -18,10 +17,26 @@ export default {
     <div class="cultural">
       <h1>CULTURAL PROGRAMS</h1>
 
-      <nav-items
-        msg="bienvenueprojects LEADS INITIATIVES TO TAKE CONCRETE ACTIONS TO SUPPORT COMMUNITIES.RAISE FUNDS AND PROVIDE RESSOURCES FOR ORGANIZATIONS, TO SUPPORT OUR CULTURAL PROGRAMS, TO ENCOURAGE YOUNG TALENTS,
-        TO HELP YOUNG CREATIVES"
-      />
+      <div class="text">
+        <p>bienvenueprojects LEADS INITIATIVES</p>
+        <p>TO TAKE CONCRETE ACTIONS</p>
+        <p>TO SUPPORT COMMUNITIES.</p>
+        <p>RAISE FUNDS AND PROVIDE</p>
+        <p>RESSOURCES FOR ORGANIZATIONS,</p>
+        <p>TO SUPPORT OUR CULTURAL PROGRAMS,</p>
+        <p>TO ENCOURAGE YOUNG TALENTS,</p>
+        <p>TO HELP YOUNG CREATIVES.</p>
+      </div>
+
+      <div class="img-div">
+        <div class="img-item">
+          <img src="../../public/ai-white-back-100.png" alt="tshirt" />
+        </div>
+        <div class="img-item">
+          <img src="../../public/flyer-all.png" alt="flyer" />
+        </div>
+      </div>
+      <nav-items />
     </div>
   </div>
 </template>
@@ -41,5 +56,31 @@ export default {
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
+
+  & .img-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  margin: 1vh 0;
+  & p {
+    margin: 0;
+  }
+}
+
+.img-item {
+  width: 20vw;
+  height: 20vh;
+  margin: 2vh;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
 }
 </style>

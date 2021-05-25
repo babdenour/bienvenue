@@ -26,7 +26,7 @@ export default {
 .home {
   height: 100vh;
   width: 100vw;
-  // overflow: hidden;
+
   & img {
     -webkit-transform: translateY(-100%) rotate(90deg); /* Safari */
     -moz-transform: translateY(-100%) rotate(90deg); /* Firefox 3.6 Firefox 4 */
@@ -47,7 +47,7 @@ export default {
     justify-content: stretch;
 
     & p {
-      margin: 6vh;
+      margin: 9vh 0;
       font-size: 3vh;
 
       &:hover {
